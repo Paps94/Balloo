@@ -22,8 +22,8 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->default('default.jpg');
             $table->string('honorific')->nullable();
             $table->date('date_of_birth')->nullable();
-            $table->integer('phone_number')->nullable();
-            $table->integer('mobile_number')->nullable();
+            $table->bigInteger('phone_number')->nullable();
+            $table->bigInteger('mobile_number')->nullable();
             $table->string('address')->nullable();
             $table->string('postcode')->nullable();
             $table->string('region')->nullable();
