@@ -23,7 +23,7 @@ class UsersController extends Controller
          $avatar = $request->file('avatar');
          $filename = time() . '.' . $avatar->getClientOriginalExtension();
          $img = Image::make($avatar)->fit(320, 320)->save( public_path('image/avatars/' . $filename ) );
-         dd(is_writable($path . $fileName));
+         dd(is_writable($path . $filename));
          //check if the user is the signed in user
          $user = Auth::user();
          //Save old image to a new variable for deleting purposes
